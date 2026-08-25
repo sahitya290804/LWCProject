@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Calendar">
+
+        <div class="slds-p-around_medium">
+
+            <div class="header">
+                <lightning-button-icon
+                    icon-name="utility:chevronleft"
+                    onclick={previousMonth}>
+                </lightning-button-icon>
+
+                <h2>{monthYear}</h2>
+
+                <lightning-button-icon
+                    icon-name="utility:chevronright"
+                    onclick={nextMonth}>
+                </lightning-button-icon>
+            </div>
+
+            <div class="calendar">
+
+                <template for:each={weekdays} for:item="day">
+                    <div key={day} class="weekday">
+                        {day}
+                    </div>
+                </template>
+
+                <template for:each={days} for:item="day">
+                    <div
+                        key={day.key}
+                        class={day.className}
+                        data-date={day.date}
+                        onclick={handleDateClick}>
+
+                        {day.value}
+                    </div>
+                </template>
+
+            </div>
+
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background: #f3f3f3;
+}
+
+.day {
+    height: 80px;
+    border: 1px solid #d8dde6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: white;
+}
+
+.day:hover {
+    background: #f4f6f9;
+}
+
+.today {
+    background: #0176d3;
+    color: white;
+    font-weight: bold;
+}
+
+.blank {
+    border: none;
+    background: transparent;
+}
